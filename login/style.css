@@ -1,0 +1,28 @@
+body {
+  background-image: url(christoph-nolte-hUhP8wr_dBo-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  min-width: 300px;
+  max-width: 500px;
+  padding: 5rem;
+  border-radius: 2rem;
+  /* height: 100vh; */
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+.btn-primary {
+}
+.form-control {
+  margin: 0 auto;
+}

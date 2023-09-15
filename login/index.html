@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <button class="btn btn-primary btn-lg">Login</button>
+    <button class="btn btn-success">Login</button>
+    <button class="btn btn-danger">Login</button>
+    <div class="spinner-border text-primary btn-sm"></div> -->
+
+    <!-- <br />
+    <br /> -->
+    <div class="container">
+      <h1>Login</h1>
+      <br />
+      <label class="form-lable">UserName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        placeholder="UserName"
+      />
+      <br />
+      <label class="form-lable">Password</label>
+      <input
+        type="text"
+        class="form-control"
+        id="password"
+        oninput="test()"
+        placeholder="password"
+      />
+
+      <br />
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Remember Me</label
+        >
+      </div>
+      <br />
+      <button class="btn btn-secondary" id="btn">Login</button>
+      <hr />
+
+      <p>Dont Have An Account Yet? <a href="">Register</a></p>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
