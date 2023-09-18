@@ -8,6 +8,7 @@ $products= $product_res->fetch_assoc();
 $name = $products['name'];
 $image1 = $products['image'];
 
+
 // $desc = $products['description'];
 $post = nl2br($products['description']);
 
@@ -19,7 +20,7 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $name?> - SDElectronics</title>
-    <link rel="stylesheet" href="nav.css">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -28,13 +29,22 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="nav.css">
+    
     
   </head>
   <body>
     
     <div class="nav">
       <div class="logo">SDELECTRONICS</div>
-      
+      <form action="search.php" method="POST">
+      <div class="search_input_holder">
+        <input class="Search_input"type="text" placeholder="Type Here...." name="search_input" />
+        <input class="search_btn" type="submit" value="Search" />
+        
+        
+      </div>
+      </form>
       <a href="login/"> <button class="login">Login</button></a>
     </div>
     <br>
@@ -49,6 +59,8 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
           </div>
         </div>
       </div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="details_txt">
         <div class="title"><?= $products['name']?></div>
         <!-- <div class="list">
@@ -69,6 +81,7 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
             <li>256 storage</li>
           </ul>
         </div> -->
+
         <div class="description_text">
           <?= $post?>
         </div>
@@ -96,7 +109,7 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
     <script>
       const slider = document.querySelector(".slider_img");
 
-      const images = ["<?= $products['image']?>", "<?= $products['image-2']?>","<?= $products['image-3']?>","<?= $products['image-4']?>"];
+      const images = ["<?= $products['image']?>", "<?= $products['image_2']?>","<?= $products['image_3']?>","<?= $products['image_4']?>"];
       let count = 0;
       let length = images.length;
       console.log(length);

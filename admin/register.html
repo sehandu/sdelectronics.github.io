@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/strap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <title>Register</title>
+  </head>
+  <body>
+    <section id="header" class="vh100 light-bg">
+      <div class="grid-2">
+        <div class="cont">
+          <div class="centerer">
+            <lottie-player
+              src="https://assets4.lottiefiles.com/packages/lf20_UW8DlCRljO.json"
+              background="transparent"
+              speed="1"
+              class="lottie"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+        <div class="centerer">
+          <div class="container-login light-bg">
+            <div class="logo">
+              <div class="centerer">
+                <img src="images/logo.png" class="logo-img-login" alt="logo" />
+              </div>
+            </div>
+
+            <!-- <p class="custom-id-test">Enter your Id to login</p> -->
+            <h1 class="login-txt">Register</h1>
+            <form action="register.php" method="POST">
+              <div class="centerer">
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="input-round auto-center"
+                />
+              </div>
+
+              <br />
+              <div class="centerer">
+                <select
+                  name="grade"
+                  id=""
+                  class="input-round auto-center"
+                  required
+                >
+                  <option selected disabled>Select your grade</option>
+                  <option value="g-6">grade-6</option>
+                  <option value="g-7">grade-7</option>
+                  <option value="g-8">grade-8</option>
+                  <option value="g-9">grade-9</option>
+                  <option value="g-10">grade-10</option>
+                  <option value="g-11">grade-11</option>
+                  <option value="g-12">grade-12</option>
+                  <option value="g-13">grade-13</option>
+                </select>
+              </div>
+              <br />
+              <div class="centerer">
+                <input
+                  required
+                  name="admission"
+                  type="number"
+                  placeholder="Admission number"
+                  class="input-round auto-center"
+                />
+              </div>
+              <br />
+              <div class="centerer">
+                <input
+                  type="text"
+                  required
+                  name="email"
+                  placeholder="Email"
+                  class="input-round auto-center"
+                />
+              </div>
+              <br />
+              <div class="centerer">
+                <input
+                  type="text"
+                  name="number"
+                  required
+                  placeholder="Mobile number"
+                  class="input-round auto-center"
+                />
+              </div>
+              <br />
+              <!-- <div class="centerer">
+                <input
+                  required
+                  name="password"
+                  type="text"
+                  placeholder="password"
+                  class="input-round auto-center"
+                />
+              </div> -->
+              <br />
+              <div class="centerer">
+                <input type="submit" class="button-login" />
+              </div>
+            </form>
+            <!-- <p class="thin-p already-txt">
+              Already a member? <a href="login.html">Login</a>
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

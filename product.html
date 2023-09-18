@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Name - SDElectronics</title>
+    <link rel="stylesheet" href="" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -76,7 +77,7 @@
     <script>
       const slider = document.querySelector(".slider_img");
 
-      const images = ["a53_1.avif", "a53_2.jpg"];
+      const images = ["iPhone-14-1.jpg"];
       let count = 0;
       let length = images.length;
       console.log(length);
@@ -85,7 +86,7 @@
         // console.log(count);
 
         let test = "ad-1.jpg";
-        let text = "url(products/" + images[count] + ")";
+        let text = "url(./upload/uploads/" + images[count] + ")";
         slider.style.backgroundImage = text;
       }
       function right() {

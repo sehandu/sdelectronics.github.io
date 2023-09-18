@@ -26,6 +26,10 @@
   padding: 4rem 1rem 2rem 1rem;
   text-align: center;
 }
+.banner {
+  width: 100%;
+  margin: 0 auto;
+}
 .caption {
   position: absolute;
   bottom: 0;
@@ -179,7 +183,7 @@
   display: flex;
   height: 3.5rem;
 }
-.search_input_holder input {
+.search_input_holder .Search_input {
   width: 100%;
   margin-left: 2rem;
   background-color: transparent;

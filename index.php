@@ -7,8 +7,10 @@
    $product_res = $con->query($products_sql);
    $Apple_products_sql = "SELECT * FROM products WHERE isApple = 1 ORDER BY id desc limit 6";
    $Apple_product_res = $con->query($Apple_products_sql);
-    $Samsung_products_sql = "SELECT * FROM products WHERE isSamsung = 1 ORDER BY id desc limit 6";
+    $Samsung_products_sql = "SELECT * FROM products WHERE isSamsung = 1 ORDER BY id ";
    $amsung_product_res = $con->query($Samsung_products_sql);
+    $Acc_sql = "SELECT * FROM products WHERE cat = 3 ORDER BY id limit 8 ";
+   $Acc_res = $con->query($Acc_sql);
 //    $learn_sql = "SELECT * FROM learn ORDER
 // BY id desc limit 3";
 //  $learn_res = $con->query($learn_sql); 
@@ -33,12 +35,14 @@
   <body>
     <div class="nav">
       <div class="logo">SDELECTRONICS</div>
+      <form action="search.php" method="POST">
       <div class="search_input_holder">
-        <input type="text" placeholder="Search" /><img
-          src="svg/search.png"
-          alt=""
-        />
+        <input class="Search_input"type="text" placeholder="Type Here...." name="search_input" />
+        <input class="search_btn" type="submit" value="Search" />
+        
+        
       </div>
+      </form>
       <a href="login/"> <button class="login">Login</button></a>
     </div>
     <section id="header">
@@ -89,6 +93,7 @@
     <div class="limiter">
       <section id="catalog">
         <div class="cat_flex">
+          <a href="product_list.php?cat=smartPhones">
           <div class="con-verticle">
             <br />
             <p class="red">10% OFF</p>
@@ -99,27 +104,32 @@
             </p>
             <img src="./images/phones.webp" class="cat-img-1" alt="" />
           </div>
+</a>
+<a href="product_list.php?cat=lap_pc">
           <div class="con-horizontal">
             <div class="laptop-con">
               <div class="_con">
                 <br />
                 <p class="red">5% OFF</p>
-                <h1>Laptop</h1>
+                <h1>Laptops $ PC</h1>
                 <br />
                 <p class="dis">Buy your Laptop from us and get 5% discount.</p>
               </div>
               <img src="./images/laptop.png" alt="" class="cat-img-2" />
             </div>
+</a>
             <div class="spacer"></div>
-            <div class="flexerer">
+           <a href="product_list.php?cat=acc"> <div class="flexerer">
               <div class="con-verticle-2">
                 <br />
                 <p class="red">20% OFF</p>
-                <h1>Acces</h1>
+                <h1>accessories</h1>
                 <br />
 
-                <img src="./images/airpods.png" class="cat-img-1" alt="" />
+                <img src="./images/gimble.png" class="cat-img-1" alt="" />
               </div>
+              </a>
+              <a href="product_list.php?cat=speakers">
               <div class="con-verticle-2">
                 <br />
                 <p class="red">20% OFF</p>
@@ -128,6 +138,7 @@
 
                 <img src="images/airpods.png" class="cat-img-1" alt="" />
               </div>
+</a>
             </div>
           </div>
         </div>
@@ -231,6 +242,9 @@
       </section>
       <div class="spacer"></div>
       <div class="spacer"></div>
+      <!-- <div class="banner-img"><img src="images/apple-banner.jpg" class="banner" alt=""></div> -->
+<!-- <div class="spacer"></div>
+<div class="spacer"></div> -->
       <section id="mobile">
         <h1 class="title">Smart Phones</h1>
         <div class="spacer"></div>
@@ -250,6 +264,7 @@
         </div>
 
         <div class="spacer"></div>
+      
         <div class="tab_content">
           <div class="grid-auto" id="samsung">
                <?php
@@ -305,13 +320,43 @@
       </section>
       <div class="spacer"></div>
       <div class="spacer"></div>
+      <!-- <div class="banner-img"><img src="images/jbl-banner.jpg" class="banner" alt=""></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div> -->
       <section id="accessories">
         <h1 class="title">Accessories</h1>
+        <div class="spacer"></div>
+        <div class="grid-auto">
+          <?php
+              
+                    
+                    while ($Acc= $Acc_res->fetch_assoc()) { ?>
+                    <a href="product.php?id=<?= $Acc['id']?>">
+                      <div class="con-verticle-3">
+
+            <img src="./upload/uploads/<?= $Acc['image']?>" class="cat-img-3" />
+            <br />
+            <br />
+            <h4 class="product"><?= $Acc['name']?></h4>
+            <br />
+            <div class="price_banner">RS: <?= $Acc['price']?></div>
+            <br />
+            <br />
+            <div class="availibility_row">
+              Availiable
+              <div class="green_av"></div>
+              <div class="red_av"></div>
+            </div>
+          </div></a>
+          <?php
+                    }
+                
+                ?>
       </section>
     </div>
     <section id="footer">
       <div class="container">
-        <h1>Copyright © 2021 iDealz. All Rights Reserved.</h1>
+        <h1>Copyright © 2023 SDELECTRONICS. All Rights Reserved.</h1>
       </div>
     </section>
     <script>
