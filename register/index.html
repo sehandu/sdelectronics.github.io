@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - SDELECTRONICS</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <button class="btn btn-primary btn-lg">Login</button>
+    <button class="btn btn-success">Login</button>
+    <button class="btn btn-danger">Login</button>
+    <div class="spinner-border text-primary btn-sm"></div> -->
+
+    <!-- <br />
+    <br /> -->
+    <div class="container">
+      <h1>Register</h1>
+      <br />
+      <label class="form-lable">UserName</label>
+      <form action="register.php" method="POST">
+        <input
+          type="text"
+          name="email"
+          class="form-control"
+          id="email"
+          placeholder="UserName"
+        />
+        <br />
+        <label class="form-lable">Password</label>
+        <input
+          type="text"
+          name="password"
+          class="form-control"
+          id="password"
+          onkeydown="validation()"
+          placeholder="password"
+        />
+
+        <br />
+        <label class="form-lable">Re enter the Password</label>
+        <input
+          type="text"
+          class="form-control"
+          id="password"
+          placeholder="password"
+        />
+
+        <br />
+        <input class="btn btn-secondary" type="submit" value="Register" />
+      </form>
+      <hr />
+
+      <p>Already Have An Account Yet? <a href="../login/">login</a></p>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

@@ -2,7 +2,14 @@
 
    session_start();
    include 'config.php';
-
+   $email = $_SESSION['UserEmail'];
+   if(empty($email)){
+    
+     header('location:./login/');
+   }
+   else{
+    
+   }
    $products_sql = "SELECT * FROM products WHERE isTop = 1 ORDER BY id desc limit 6";
    $product_res = $con->query($products_sql);
    $Apple_products_sql = "SELECT * FROM products WHERE isApple = 1 ORDER BY id desc limit 6";
@@ -11,6 +18,8 @@
    $amsung_product_res = $con->query($Samsung_products_sql);
     $Acc_sql = "SELECT * FROM products WHERE cat = 3 ORDER BY id limit 8 ";
    $Acc_res = $con->query($Acc_sql);
+
+   
 //    $learn_sql = "SELECT * FROM learn ORDER
 // BY id desc limit 3";
 //  $learn_res = $con->query($learn_sql); 
@@ -43,7 +52,7 @@
         
       </div>
       </form>
-      <a href="login/"> <button class="login">Login</button></a>
+      <a href="profile.php"> <button class="login"><?=$email?></button></a>
     </div>
     <section id="header">
       <div class="arrow-left" onclick="left()">

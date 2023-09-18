@@ -14,6 +14,17 @@
   max-width: 1300px;
   margin: 0 auto;
 }
+.flexerer {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_add {
+  background-color: rgb(255, 166, 0);
+  padding: 1rem;
+  border: none;
+  width: 130px;
+  border-radius: 1rem;
+}
 #details {
   max-width: 1300px;
 
@@ -101,17 +112,26 @@
 .buy {
   background-color: rgb(0, 140, 255);
   border: none;
-  width: 300px;
 
-  height: 3.5rem;
-  border-radius: 2rem;
+  width: 130px;
+  padding: 1rem 0;
+  border-radius: 1rem;
   color: white;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 @media (max-width: 800px) {
   .cover_image {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+  }
+  .flexerer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .buy {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }

@@ -61,8 +61,16 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
       </div>
       <div class="spacer"></div>
       <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="details_txt">
-        <div class="title"><?= $products['name']?></div>
+        
+        <div class="flexerer">
+          <div class="title"><?= $products['name']?></div>
+           <button class="buy">Buy Now</button>
+          <a href="addCart.php?pId=<?=$products['id']?>"><button class="cart_add">Add To Cart</button></a></div>
+          
+        
         <!-- <div class="list">
           <ul>
             <li>256 storage</li>
