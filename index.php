@@ -52,7 +52,7 @@
         
       </div>
       </form>
-      <a href="profile.php"> <button class="login"><?=$email?></button></a>
+      <a href="profile.php"> <button class="login">Cart</button></a>
     </div>
     <section id="header">
       <div class="arrow-left" onclick="left()">

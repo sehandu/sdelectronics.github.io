@@ -45,7 +45,7 @@ $post = '<p class="blog-text">' .preg_replace('#(<br/>[\r\n]+){2}#', '<p><p>', $
         
       </div>
       </form>
-      <a href="login/"> <button class="login">Login</button></a>
+      <a href="profile.php"> <button class="login">Cart</button></a>
     </div>
     <br>
     <section id="details">

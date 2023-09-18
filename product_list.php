@@ -54,7 +54,7 @@
         
       </div>
       </form>
-      <a href="login/"> <button class="login">Login</button></a>
+      <a href="profile.php"> <button class="login">Cart</button></a>
     </div>
 
     <div class="spacer"></div>
