@@ -10,13 +10,14 @@ if(empty($email)){
     header('location:./login/');
 }
 else{
-    if(isset($_POST['id'])){
-    $id = $_POST['id'];
-    $qua = $_POST['quantity'];
-    // header("location: product.php?id=$id");
-    $sql = "INSERT INTO cart (user, product, quantity ) VALUES ('$email','$id', '$qua')";
+    if(isset($_POST['name'])){
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $total = $_POST['total'];
+    
+    $sql = "INSERT INTO oder (name, email, location, total ) VALUES ('$name','$email', '$address', '$total')";
                 if ($con->query($sql) === TRUE) {
-                         header("location: product.php?id=$id");
+                         header("location: profile.php");
                 }
 
 }

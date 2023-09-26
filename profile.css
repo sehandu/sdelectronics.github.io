@@ -6,10 +6,91 @@
   font-family: "Roboto", sans-serif;
   /* font-family: "Roboto Condensed", sans-serif; */
 }
-h1 {
-  text-align: center;
+.spacer {
+  height: 5rem;
 }
-.container-center {
-  width: 400px;
-  margin: 5rem auto;
+.cart-holder-limiter {
+  max-width: 1300px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  -moz-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+}
+.cart-holder {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.cart-img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.name,
+.quantity-holder,
+.price,
+.close {
+  display: flex;
+
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.quantity {
+  width: 100px;
+  height: 3rem;
+  padding: 1rem 1rem;
+}
+.close {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+.total {
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  background-color: rgb(255, 255, 255);
+  min-height: 10rem;
+  -webkit-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  -moz-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+}
+.buyNow {
+  padding: 1rem 2rem;
+  background-color: rgb(0, 140, 255);
+  border: none;
+  border-radius: 3rem;
+  color: white;
+  -webkit-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  -moz-box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  box-shadow: 10px 10px 31px 1px rgba(156, 156, 156, 1);
+  margin: 1rem 0rem;
+}
+a {
+  color: black;
+}
+@media (max-width: 800px) {
+  .cart-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .name,
+  .quantity-holder,
+  .price,
+  .close {
+    display: flex;
+
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+  }
 }

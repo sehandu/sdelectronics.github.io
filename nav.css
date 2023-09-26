@@ -15,6 +15,8 @@ a {
 }
 .logo {
   font-size: 1.52rem;
+  text-decoration: none;
+  color: black;
 }
 .login {
   width: 100px;

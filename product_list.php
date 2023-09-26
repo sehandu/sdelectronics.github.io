@@ -45,7 +45,7 @@
   </head>
   <body>
     <div class="nav">
-      <div class="logo">SDELECTRONICS</div>
+      <a href="../sdElectronics"><div class="logo">SDELECTRONICS</div></a>
       <form action="search.php" method="POST">
       <div class="search_input_holder">
         <input class="Search_input"type="text" placeholder="Type Here...." name="search_input" />

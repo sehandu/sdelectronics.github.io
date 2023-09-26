@@ -2,14 +2,14 @@
 
    session_start();
    include 'config.php';
-   $email = $_SESSION['UserEmail'];
-   if(empty($email)){
+  //  $email = $_SESSION['UserEmail'];
+  //  if(empty($email)){
     
-     header('location:./login/');
-   }
-   else{
+  //    header('location:./login/');
+  //  }
+  //  else{
     
-   }
+  //  }
    $products_sql = "SELECT * FROM products WHERE isTop = 1 ORDER BY id desc limit 6";
    $product_res = $con->query($products_sql);
    $Apple_products_sql = "SELECT * FROM products WHERE isApple = 1 ORDER BY id desc limit 6";
@@ -43,7 +43,7 @@
   </head>
   <body>
     <div class="nav">
-      <div class="logo">SDELECTRONICS</div>
+      <a href="../sdElectronics"><div class="logo">SDELECTRONICS</div></a>
       <form action="search.php" method="POST">
       <div class="search_input_holder">
         <input class="Search_input"type="text" placeholder="Type Here...." name="search_input" />
