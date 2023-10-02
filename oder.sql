@@ -24,32 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Table structure for table `oder`
 --
 
-CREATE TABLE `cart` (
+CREATE TABLE `oder` (
   `id` int(11) NOT NULL,
-  `user` varchar(30) NOT NULL,
-  `product` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `name` varchar(25) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `total` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `cart`
+-- Dumping data for table `oder`
 --
 
-INSERT INTO `cart` (`id`, `user`, `product`, `quantity`) VALUES
-(9, 'sdkumanayaka@gmail.com', 3, 1),
-(10, 'sdkumanayaka@gmail.com', 4, 1);
+INSERT INTO `oder` (`id`, `name`, `email`, `location`, `total`) VALUES
+(1, '0', '0', '95', ''),
+(2, 'sehandu', 'sdkumanayaka@gmail.com', '95/6 pitipana north homagama', ''),
+(3, 'sehandu', 'sdkumanayaka@gmail.com', '95/6 pitipana north homagama', ''),
+(4, 'sehandu', 'sdkumanayaka@gmail.com', '95/6 pitipana north homagama', '45500'),
+(5, 'sehandu', 'sdkumanayaka@gmail.com', '95/6 pitipana north homagama', '395500');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cart`
+-- Indexes for table `oder`
 --
-ALTER TABLE `cart`
+ALTER TABLE `oder`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +61,10 @@ ALTER TABLE `cart`
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT for table `oder`
 --
-ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `oder`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
